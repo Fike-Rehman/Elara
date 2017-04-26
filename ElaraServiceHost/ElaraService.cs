@@ -4,12 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Elara
+namespace CTS.Elara
 {
-    class Program
+    public class ElaraService
     {
-        static void Main(string[] args)
+
+        public void Start()
         {
+
         }
+
+        public void Stop()
+        {
+
+        }
+
     }
 }
