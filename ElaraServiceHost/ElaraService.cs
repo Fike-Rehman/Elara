@@ -1,33 +1,41 @@
 ﻿using System.Reflection;
+using System.Speech.Synthesis;
+using System.Threading;
 
 namespace CTS.Elara
 {
-    using System.Threading;
-    using System.Threading.Tasks;
-
     public class ElaraService
     {
         private static readonly log4net.ILog _logger =
                  log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
+        private readonly SpeechSynthesizer speechSynthesizer;
+
+        public ElaraService()
+        {
+            speechSynthesizer = new SpeechSynthesizer();
+            speechSynthesizer.SetOutputToDefaultAudioDevice();
+        }
+
+
         public void Start()
         {
-            _logger.Error("Elara Service Started my man!");
+            _logger.Debug("Elara Service Started my man!");
+
+            speechSynthesizer.Speak("Elara Service Started!");
 
         }
 
         public void Stop()
         {
-            _logger.Info("Elara service stop requested!");
+            _logger.Info("Elara Service Stop requested!");
 
-            
-
-            var n = 3;
+            int n = 3;
             while (n > 0)
             {
-                _logger.Debug($"\rStopping application in {n} seconds");
-                Thread.Sleep(1000);
+                _logger.InfoFormat($"Stoping Elara Service in {n} seconds...");
                 n--;
+                Thread.Sleep(1000);
             }
 
         }
