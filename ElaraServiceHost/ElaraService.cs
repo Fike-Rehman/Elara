@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
 namespace CTS.Elara
 {
+    using System.Threading;
+    using System.Threading.Tasks;
+
     public class ElaraService
     {
         private static readonly log4net.ILog _logger =
@@ -14,12 +12,23 @@ namespace CTS.Elara
 
         public void Start()
         {
-            _logger.Debug("Elara Service Started my man!");
+            _logger.Error("Elara Service Started my man!");
 
         }
 
         public void Stop()
         {
+            _logger.Info("Elara service stop requested!");
+
+            
+
+            var n = 3;
+            while (n > 0)
+            {
+                _logger.Debug($"\rStopping application in {n} seconds");
+                Thread.Sleep(1000);
+                n--;
+            }
 
         }
 

@@ -22,7 +22,7 @@ namespace CTS.Elara
                 config.SetServiceName("ElaraService");
 
                 config.RunAsLocalSystem();
-                config.StartAutomaticallyDelayed();
+                config.StartAutomatically();
             });
         }
     }
