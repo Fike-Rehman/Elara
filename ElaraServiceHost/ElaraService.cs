@@ -11,6 +11,8 @@ namespace CTS.Elara
 
         private readonly SpeechSynthesizer speechSynthesizer;
 
+        private Timer pingtimer;
+
         public ElaraService()
         {
             speechSynthesizer = new SpeechSynthesizer();
@@ -24,6 +26,7 @@ namespace CTS.Elara
 
             speechSynthesizer.Speak("Elara Service Started!");
 
+            // Start the ping timer
         }
 
         public void Stop()
