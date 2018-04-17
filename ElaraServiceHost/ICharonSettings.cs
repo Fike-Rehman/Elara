@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.SqlServer.Server;
 
-namespace Elara
+namespace CTS.Elara
 {
-    public interface IConfigSettings
+    public interface ICharonSettings
     {
         /// <summary>
         /// IP address of the Charon Arduino board

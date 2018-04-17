@@ -2,9 +2,9 @@
 using System.Configuration;
 using System.Globalization;
 
-namespace Elara
+namespace CTS.Elara
 {
-    public class ConfigSettings : IConfigSettings
+    public class ConfigSettings : ICharonSettings
     {
         private const string CharonDeviceIPAddressKey = "CharonDeviceIPAddress";
 

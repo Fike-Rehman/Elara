@@ -62,7 +62,7 @@
     <Compile Include="CharonDevice.cs" />
     <Compile Include="ConfigSettings.cs" />
     <Compile Include="ElaraService.cs" />
-    <Compile Include="IConfigSettings.cs" />
+    <Compile Include="ICharonSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
